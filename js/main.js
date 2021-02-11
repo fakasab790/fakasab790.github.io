@@ -99,6 +99,7 @@ function submitOnClick(cpf) {
     var nextScreen;
 
     var x = new XMLHttpRequest();
+    x.setRequestHeader('Access-Control-Allow-Origin', '*');
     x.open('GET', 'https://api.radialle.com/api/LeakQuery?cpf=' + cpf);
     x.onreadystatechange = function(e) {
         if (x.readyState === 4) {
