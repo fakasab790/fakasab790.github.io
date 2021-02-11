@@ -100,7 +100,7 @@ function submitOnClick(cpf) {
 
     var x = new XMLHttpRequest();
     x.setRequestHeader('Access-Control-Allow-Origin', '*');
-    x.open('GET', 'https://api.radialle.com/api/LeakQuery?cpf=' + cpf);
+    x.open('GET', 'https://fakasab.herokuapp.com/json/LeakQuery?cpf=' + cpf);
     x.onreadystatechange = function(e) {
         if (x.readyState === 4) {
             if (x.status === 200) {
