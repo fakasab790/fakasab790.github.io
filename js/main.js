@@ -98,8 +98,7 @@ function submitOnClick(cpf) {
     moveOutLeft(queryScreen);
     var nextScreen;
 
-    var x = new XMLHttpRequest();
-    x.setRequestHeader('Access-Control-Allow-Origin', '*');
+    var x = new XMLHttpRequest();  
     x.open('GET', 'https://fakasab.herokuapp.com/json/LeakQuery?cpf=' + cpf);
     x.onreadystatechange = function(e) {
         if (x.readyState === 4) {
